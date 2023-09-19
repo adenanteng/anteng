@@ -139,35 +139,35 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'Waykapay',
+      title: 'Founder',
       logo: logoPlanetaria,
-      start: '2019',
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'Gink Technology',
+      title: 'Full-Stack Developer',
+      logo: logoPlanetaria,
+      start: '2022',
+      end: '2023',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Medify Indonesia',
+      title: 'Onsite Programmer',
+      logo: logoPlanetaria,
+      start: '2021',
+      end: '2022',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'KiriminAja',
+      title: 'Front-End Developer',
+      logo: logoPlanetaria,
+      start: '2021',
+      end: '2021',
     },
   ]
 
@@ -255,7 +255,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I’m Aden Anteng, a software developer based in Bandar Lampung."
         />
       </Head>
       <Container className="mt-9">
@@ -264,17 +264,10 @@ export default function Home({ articles }) {
             Software developer, founder, and amateur astronaut.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I’m Aden Anteng, a software developer based in Bandar Lampung City. I’m the founder and CTO of Waykapay,
+            where we develop technologies to simplify people needs.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
             <SocialLink
               href="https://instagram.com"
               aria-label="Follow on Instagram"
