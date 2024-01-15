@@ -61,28 +61,28 @@ const experience = [
     subtitle: 'Full-Stack Web Developer',
     title: 'Waykapay',
     img: '/img/vendor/waykapay-square.png',
-    desc: 'Lorem',
+    desc: 'Financial Services',
   },
   {
     id: 2,
     subtitle: 'Full-Stack Web Developer',
     title: 'Gink Technology',
     img: '/img/vendor/ginktech-square.png',
-    desc: 'Lorem ipsum dolor sit amet',
+    desc: 'Information Technology',
   },
   {
     id: 3,
     subtitle: 'Onsite Programmer',
     title: 'Medify',
     img: '/img/vendor/medify-square.png',
-    desc: 'Lorem ipsum dolor sit amet',
+    desc: 'Healthcare',
   },
   {
     id: 4,
     subtitle: 'Front-End Web Developer',
     title: 'KiriminAja',
     img: '/img/vendor/kiriminaja-square.png',
-    desc: 'Lorem ipsum dolor sit amet',
+    desc: 'Expedition',
   },
 
 ]
@@ -165,7 +165,7 @@ const skill = [
 
       <div class="">
 <!--        <h3 class="text-lg font-medium text-primary-700 dark:text-primary-200">I'am</h3>-->
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-6xl hover:animate-bounce cursor-default">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-6xl cursor-default">
           Aden Anteng Anugrah
         </h1>
       </div>
@@ -192,21 +192,68 @@ const skill = [
 <!--      <ClientOnly>-->
         <div class="grid gap-20 my-0 lg:my-28" v-aos="['animate__fadeInUpBig']" >
 
-          <ListGrid
-              title="Featured Works"
-              :list="project"
-          />
+<!--          <ListGrid-->
+<!--              title="Featured works"-->
+<!--              :list="project"-->
+<!--          />-->
 
           <ListStack
-              title="Working Experience"
+              title="Working experience"
               :list="experience"
           />
 
           <ListGrid
-              title="Tools & Languages"
+              title="Tools & languages"
               class="grid grid-flow-row-dense lg:grid-cols-4 grid-rows-3"
               :list="skill"
           />
+
+          <div class="relative ">
+            <div class="bg-white/20 dark:bg-gray-900/20 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-300 dark:border-gray-700 hover:scale-105 transition duration-500">
+              <div class="px-5 py-3">
+                <h2 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl">Get in touch</h2>
+                <p class="mt-3 ">Feel free to contact me anytime.</p>
+                <dl class="mt-8 text-base">
+<!--                  <div>-->
+<!--                    <dd>-->
+<!--                      <p>Lintas Sumatera Street,</p>-->
+<!--                      <p>Springfield, OR 12345</p>-->
+<!--                    </dd>-->
+<!--                  </div>-->
+                  <div class="mt-3">
+                    <a class="flex items-center" href="https://github.com/adenanteng" target="_blank">
+                      <UIcon name="i-simple-icons-github" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
+                      <span class="ml-3">adenanteng</span>
+                    </a>
+                  </div>
+                  <div class="mt-3">
+                    <a class="flex items-center" href="https://linkedin.com/in/adenanteng/" target="_blank">
+                      <UIcon name="i-simple-icons-linkedin" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
+                      <span class="ml-3">adenanteng</span>
+                    </a>
+                  </div>
+                  <div class="mt-3">
+                    <a class="flex items-center" href="mailto:aden.ant@live.com" target="_blank">
+                      <UIcon name="i-simple-icons-gmail" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
+                      <span class="ml-3">aden.ant@live.com</span>
+                    </a>
+                  </div>
+                  <div class="mt-3">
+                    <a class="flex items-center" href="https://wa.me/6285156875180" target="_blank">
+                      <UIcon name="i-simple-icons-whatsapp" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
+                      <span class="ml-3">+62 851 5687 5180</span>
+                    </a>
+                  </div>
+                </dl>
+<!--                <p class="mt-6 text-base">-->
+<!--                  Looking for careers?-->
+<!--                  {{ ' ' }}-->
+<!--                  <a href="#" class="font-medium text-gray-700 underline">View all job openings</a>.-->
+<!--                </p>-->
+              </div>
+
+            </div>
+          </div>
 
 <!--          <div class="w-full flex justify-center">-->
 <!--            <button class="font-medium animate-pulse" @click="upTab" v-if="tab!=1">-->
