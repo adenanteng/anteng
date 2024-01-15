@@ -9,10 +9,10 @@ import Hero from "~/layouts/hero.vue";
     <template #left>
       <div class="">
         <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-          Selamat Datang, Nurulina Hakim!
+          Lorem ipsum
         </h1>
         <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Yuk verifikasi dulu dirimu.
+          Lorem ipsum
         </p>
         <div class="mt-10 flex items-center gap-x-6">
           <UButton
@@ -22,7 +22,7 @@ import Hero from "~/layouts/hero.vue";
               size="xl"
               class="group transition duration-500 hover:scale-105"
               :ui="{ rounded: 'rounded-full' }"
-              label="Mulai"
+              label="Lorem ipsum"
           >
             <template #trailing>
               <UIcon name="i-fluent-arrow-right-20-regular" class="group-hover:ml-10"/>

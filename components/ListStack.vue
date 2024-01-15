@@ -6,7 +6,7 @@ const props = defineProps({
   img: String,
   class: {
     type: String,
-    default: 'grid grid-cols-2'
+    default: 'grid md:grid-cols-2'
   },
   list: Object
 })
@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="grid gap-5 cursor-pointer">
+  <div class="grid gap-5 cursor-default">
     <h1 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl hover:animate-bounce">
       {{ props.title }}
     </h1>
