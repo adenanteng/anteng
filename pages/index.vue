@@ -210,9 +210,9 @@ const skill = [
 
           <div class="relative ">
             <div class="bg-white/20 dark:bg-gray-900/20 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-300 dark:border-gray-700 hover:scale-105 transition duration-500">
-              <div class="px-5 py-3">
-                <h2 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl">Get in touch</h2>
-                <p class="mt-3 ">Feel free to contact me anytime.</p>
+              <div class="px-5 py-3 group/a">
+                <h2 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl cursor-default">Get in touch</h2>
+                <p class="mt-3 cursor-default">Feel free to contact me anytime.</p>
                 <dl class="mt-8 text-base">
 <!--                  <div>-->
 <!--                    <dd>-->
@@ -220,26 +220,26 @@ const skill = [
 <!--                      <p>Springfield, OR 12345</p>-->
 <!--                    </dd>-->
 <!--                  </div>-->
-                  <div class="mt-3">
-                    <a class="flex items-center" href="https://github.com/adenanteng" target="_blank">
+                  <div class="mt-3 group/b">
+                    <a class="flex items-center group-hover/a:opacity-50 group-hover/b:opacity-100" href="https://github.com/adenanteng" target="_blank">
                       <UIcon name="i-simple-icons-github" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
                       <span class="ml-3">adenanteng</span>
                     </a>
                   </div>
-                  <div class="mt-3">
-                    <a class="flex items-center" href="https://linkedin.com/in/adenanteng/" target="_blank">
+                  <div class="mt-3 group/b">
+                    <a class="flex items-center group-hover/a:opacity-50 group-hover/b:opacity-100" href="https://linkedin.com/in/adenanteng/" target="_blank">
                       <UIcon name="i-simple-icons-linkedin" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
                       <span class="ml-3">adenanteng</span>
                     </a>
                   </div>
-                  <div class="mt-3">
-                    <a class="flex items-center" href="mailto:aden.ant@live.com" target="_blank">
+                  <div class="mt-3 group/b">
+                    <a class="flex items-center group-hover/a:opacity-50 group-hover/b:opacity-100" href="mailto:aden.ant@live.com" target="_blank">
                       <UIcon name="i-simple-icons-gmail" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
                       <span class="ml-3">aden.ant@live.com</span>
                     </a>
                   </div>
-                  <div class="mt-3">
-                    <a class="flex items-center" href="https://wa.me/6285156875180" target="_blank">
+                  <div class="mt-3 group/b">
+                    <a class="flex items-center group-hover/a:opacity-50 group-hover/b:opacity-100" href="https://wa.me/6285156875180" target="_blank">
                       <UIcon name="i-simple-icons-whatsapp" class="text-2xl text-gray-900 dark:text-white transition duration-500" />
                       <span class="ml-3">+62 851 5687 5180</span>
                     </a>
