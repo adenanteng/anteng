@@ -139,7 +139,7 @@ const about = {
                         (Keeping Jasa Marga’s website running like a well-oiled toll road!)
                     </>,
                     <>
-                        At PT Kuantum Solusi, I maintain and enhance the website for PT Jasa Marga.
+                        At Kuantum Solusi, I maintain and enhance the website for PT Jasa Marga (Persero) Tbk.
                         From bug fixes to feature upgrades, I make sure their digital presence is as seamless as
                         their highways (minus the traffic jams).
                     </>,
@@ -168,7 +168,7 @@ const about = {
         skills: [
             {
                 title: "Frontend",
-                description: <>Next.js, Nuxt.js, React, Vue (Yes, I like both 🥲)</>,
+                description: <>Next.js, Nuxt.js (Yes, I like both 🥲)</>,
                 // optional: leave the array empty if you don't want to display images
                 images: [
                     // {
