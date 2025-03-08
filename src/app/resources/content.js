@@ -79,10 +79,9 @@ const about = {
         description: (
             <>
                 I write code, fix bugs, and sometimes create new ones just to keep things interesting. With a background
-                in
-                full-stack development, I specialize in making digital products that are both functional and (hopefully)
-                not frustrating.
-                <br/>
+                in full-stack development, I specialize in making digital products that are both functional and
+                (hopefully) not frustrating.
+                <br />&nbsp;<br />
                 When I’m not coding, you might find me cracking jokes or cruising around on my motorcycle, Aruni.
                 Because what’s life without a little bit of adventure?
             </>
