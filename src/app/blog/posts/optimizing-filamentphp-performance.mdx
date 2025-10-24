@@ -1,0 +1,140 @@
+---
+title: "Optimizing FilamentPHP for High-Performance Laravel Applications"
+summary: "Lessons learned from scaling FilamentPHP in a real-world SaaS application with thousands of medical records — including lazy loading, caching, and Livewire optimization techniques."
+publishedAt: "2025-04-28"
+image: "/images/gallery/horizontal-4.jpg"
+tag: "Laravel"
+---
+
+## ⚡ Introduction
+
+FilamentPHP is an incredible admin framework — elegant, fast to build with, and deeply integrated into Laravel’s ecosystem.  
+But when you start working with **thousands (or even millions)** of records, the defaults quickly become bottlenecks.
+
+In **Enola Clinica**, a SaaS EMR system I built for multi-department clinics, Filament was responsible for handling everything — from patient management to billing and pharmacy data.  
+As the data volume grew, I learned how to make Filament **scream in performance** without losing its elegance.
+
+---
+
+## 🚀 1. Lazy Loading and Eager Loading Done Right
+
+One of the first performance killers I encountered was **N+1 queries** in Filament tables and forms.  
+To fix this, I applied **explicit eager loading** using `->with()` in table queries:
+
+```php
+protected function getTableQuery(): Builder
+{
+    return Patient::query()
+        ->with(['province', 'regency', 'district', 'village']);
+}
+```
+
+When dealing with complex relationships like address hierarchies or ICD-10 references, eager loading reduced query counts from **hundreds to under ten** per page load.
+
+---
+
+## 🧠 2. Optimize Heavy Select Components
+
+Filament’s `Select` components can become painfully slow when binding large datasets — especially for fields like **ICD-10** or **drug lists**.
+
+Here’s how I handled it:
+
+- Use `->searchable()` with **debounce delay**  
+- Load data via **AJAX endpoint** instead of preloading all options  
+- Apply **server-side filtering** with pagination  
+
+Example:
+
+```php
+Select::make('icd10_code')
+    ->searchable()
+    ->getSearchResultsUsing(fn (string $search) =>
+        Icd10::query()
+            ->where('code', 'like', "%{$search}%")
+            ->orWhere('description', 'like', "%{$search}%")
+            ->limit(20)
+            ->pluck('description', 'code')
+    );
+```
+
+This keeps the form lightweight and responsive, even with tens of thousands of codes.
+
+---
+
+## 🧩 3. Caching Computed Data
+
+Some Filament widgets and dashboards fetch aggregate data on every request.  
+For reports that don’t change frequently, I wrapped the logic in **cache layers** using `Cache::remember()`:
+
+```php
+$totalPatients = Cache::remember('total_patients', now()->addMinutes(30), function () {
+    return Patient::count();
+});
+```
+
+This single change shaved **hundreds of milliseconds** off dashboard load times.
+
+---
+
+## ⚙️ 4. Optimize Livewire Lifecycle
+
+When working with large tables or complex modals, Livewire reactivity can introduce unnecessary overhead.  
+To improve responsiveness, I used:
+
+- **`wire:ignore`** for static UI sections  
+- **Lazy components** loaded only when needed  
+- Debounced model updates using `wire:model.defer`
+
+This minimized DOM diffs and reduced unnecessary re-renders during typing or input events.
+
+---
+
+## 🧱 5. Database Indexing & Query Optimization
+
+Filament’s filters and search fields often hit the database directly. To keep things fast:
+
+- Added **composite indexes** for frequently filtered columns  
+- Used `select()` to fetch only necessary fields  
+- Avoided `count()` on large datasets without caching  
+
+```php
+Patient::select('id', 'name', 'gender')->paginate(50);
+```
+
+These micro-optimizations drastically reduced response time under high load.
+
+---
+
+## 🚦 6. Background Jobs for Heavy Operations
+
+Exporting, report generation, or recalculating statistics can block the main thread.  
+I moved those tasks to **Laravel Queues**, processed via Supervisor on a VPS.  
+
+This ensured that the main Filament interface stayed smooth even during high-traffic hours.
+
+---
+
+## 🧩 7. VPS Deployment & Tuning
+
+Enola Clinica runs on a **VPS environment** — giving full control over configurations.  
+Key performance settings include:
+
+- PHP-FPM tuned with higher `pm.max_children`  
+- OPcache enabled and optimized for Filament routes  
+- Redis used for caching and session handling  
+- Horizon for queue monitoring  
+
+The result: Filament stays responsive even with concurrent users accessing different clinic modules simultaneously.
+
+---
+
+## 🏁 Conclusion
+
+FilamentPHP can scale — you just need to handle it with care.  
+With the right mix of **eager loading, caching, Livewire optimization, and VPS tuning**, it can handle **real-world SaaS workloads** effortlessly.
+
+In Enola Clinica’s case, these optimizations made the difference between a sluggish admin panel and a production-ready EMR system capable of managing **tens of thousands of patient records in real time.**
+
+---
+
+> 💡 **Pro tip:** Profiling your queries with Laravel Telescope or Debugbar is the first step. Once you identify the bottleneck, Filament gives you all the hooks you need to fix it elegantly.

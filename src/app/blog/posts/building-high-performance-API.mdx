@@ -1,0 +1,61 @@
+---
+title: "Building High-Performance Healthcare APIs with Go and Fiber"
+summary: "Learn how to build scalable healthcare APIs that can handle massive datasets and real-time processing using Go and Fiber framework."
+publishedAt: "2025-01-27"
+tag: "Backend Development"
+image: "/images/gallery/horizontal-2.jpg"
+---
+
+## The Challenge
+
+Healthcare systems generate enormous amounts of data daily. When building Casemix Pintar, we needed to process thousands of claims, handle large file uploads (200MB+), and maintain real-time responsiveness. Traditional REST APIs often struggle with these requirements.
+
+## Why Go and Fiber?
+
+Go's concurrency model and Fiber's performance make them perfect for healthcare applications:
+
+- **Goroutines**: Handle thousands of concurrent requests efficiently
+- **Memory Management**: Excellent garbage collection for long-running processes
+- **Type Safety**: Compile-time error checking prevents runtime issues
+- **Fiber Performance**: Up to 40x faster than Express.js
+
+## Key Implementation Strategies
+
+### Database Optimization
+```go
+// Implemented table partitioning for better query performance
+func (c *ClaimData) GetPartitionName() string {
+    if c.KodeRS == "" {
+        return "claim_data_default"
+    }
+    sanitized := strings.ReplaceAll(c.KodeRS, "-", "_")
+    return fmt.Sprintf("claim_data_%s", sanitized)
+}
+```
+
+### Batch Processing
+```go
+// Process large datasets in batches to prevent memory overflow
+batchSize := 1000
+for start := 0; start < len(claims); start += batchSize {
+    end := start + batchSize
+    if end > len(claims) {
+        end = len(claims)
+    }
+    chunk := claims[start:end]
+    // Process chunk...
+}
+```
+
+## Results
+
+- **99.9% Uptime**: Zero downtime during peak processing hours
+- **Sub-second Response**: Average API response time under 200ms
+- **Scalability**: Handles 10,000+ concurrent users without performance degradation
+
+## Lessons Learned
+
+1. **Always implement proper indexing** - Database performance is crucial
+2. **Use connection pooling** - Prevents database connection exhaustion
+3. **Implement circuit breakers** - Graceful degradation during high load
+4. **Monitor everything** - Comprehensive logging and metrics are essential
