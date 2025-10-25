@@ -164,7 +164,7 @@ const about: About = {
             Supported and improved web apps for the healthcare sector — because hospitals need bug-free software too.
           </>,
           <>
-            Worked on <b>SIMRS (Sistem Informasi Manajemen Rumah Sakit)</b> for RS Yukum Medical Centre using Laravel and MAriaDB.
+            Worked on <b>SIMRS (Sistem Informasi Manajemen Rumah Sakit)</b> for RS Yukum Medical Centre using Laravel and MariaDB.
             My days were filled with testing, debugging, and saving users from error screens.
           </>,
         ],
