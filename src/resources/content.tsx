@@ -109,10 +109,12 @@ const about: About = {
         role: "Founder & Software Engineer",
         achievements: [
           <>
-            Building a clinic management system so smooth, even doctors approve!
+            Turning claim headaches into winning victories! <br />
+            <b>Casemix Pintar</b> is your healthcare facility's smart sidekick that keeps BPJS claims happy. Less rejections, more approvals – we're making every claim count.
           </>,
           <>
-            Enola Clinica is a clinic management app that helps healthcare professionals focus on patients, not paperwork. Less clicking, more healing.
+            Building a clinic management system so smooth, even doctors approve! <br />
+            <b>Enola Clinica</b> is a clinic management app that helps healthcare professionals focus on patients, not paperwork. Less clicking, more healing.
           </>,
         ],
         images: [
@@ -131,10 +133,8 @@ const about: About = {
         role: "Software Engineer",
         achievements: [
           <>
-            Keeping Jasa Marga’s website running like a well-oiled toll road!
-          </>,
-          <>
-            At Kuantum Solusi, I maintain and enhance the website for PT Jasa Marga (Persero) Tbk.
+            Keeping <b>Jasa Marga’s</b> website running like a well-oiled toll road! <br />
+            At Kuantum Solusi, I maintain and enhance the website for <b>PT Jasa Marga (Persero) Tbk</b>.
             From bug fixes to feature upgrades, I make sure their digital presence is as seamless as their highways (minus the traffic jams).
           </>,
         ],
@@ -146,10 +146,8 @@ const about: About = {
         role: "Full Stack Developer",
         achievements: [
           <>
-            Built web apps that actually worked (most of the time) for local health projects.
-          </>,
-          <>
-            Developed and maintained <b>SIMPUS (Sistem Informasi Puskesmas)</b> for Dinas Kesehatan Kabupaten Tanggamus using Laravel, Alpine.js, and MariaDB.
+            Built web apps that actually worked (most of the time) for local health projects. <br />
+            Developed and maintained <b>SIMPUS (Sistem Informasi Puskesmas)</b> for Dinas Kesehatan Kabupaten Tanggamus. <br />
             From database design to debugging and documentation, I did it all — including helping users when things went sideways.
           </>,
         ],
@@ -161,10 +159,8 @@ const about: About = {
         role: "Software Programmer",
         achievements: [
           <>
-            Supported and improved web apps for the healthcare sector — because hospitals need bug-free software too.
-          </>,
-          <>
-            Worked on <b>SIMRS (Sistem Informasi Manajemen Rumah Sakit)</b> for RS Yukum Medical Centre using Laravel and MariaDB.
+            Supported and improved web apps for the healthcare sector — because hospitals need bug-free software too. <br />
+            Worked on <b>SIMRS (Sistem Informasi Manajemen Rumah Sakit)</b> for RS Yukum Medical Centre. 
             My days were filled with testing, debugging, and saving users from error screens.
           </>,
         ],
@@ -176,17 +172,13 @@ const about: About = {
         role: "Frontend Developer",
         achievements: [
           <>
-            Designed and developed clean, reusable UI components before it was cool.
-          </>,
-          <>
-            Worked on <b>Expedition Shipping Aggregator</b> and <b>Order Management & Fulfillment</b> systems using Laravel — helping packages (and projects) get delivered on time.
-          </>,
-          <>
+            Designed and developed clean, reusable UI components before it was cool. <br />
+            Worked on <b>Expedition Shipping Aggregator</b> and <b>Order Management & Fulfillment</b> systems — helping packages (and projects) get delivered on time.
             Created mockups, templates, and documentation to keep both code and humans on the same page.
           </>,
         ],
         images: [],
-      },      
+      },
     ],
   },
   studies: {
