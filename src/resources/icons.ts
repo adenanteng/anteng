@@ -64,7 +64,10 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVercel,
-  SiVuedotjs
+  SiVuedotjs,
+  SiExpo,
+  SiRedux,
+  SiSqlite
 } from "react-icons/si";
 
 import { FaDiscord, FaFacebook, FaGithub, FaLinkedin, FaPinterest, FaReddit, FaTelegram, FaThreads, FaWhatsapp, FaX, FaXTwitter, } from "react-icons/fa6";
@@ -141,6 +144,9 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   spotify: FaSpotify,
+  expo: SiExpo,
+  redux: SiRedux,
+  sqlite: SiSqlite
 };
 
 export type IconLibrary = typeof iconLibrary;

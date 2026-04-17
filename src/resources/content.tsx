@@ -160,7 +160,7 @@ const about: About = {
         achievements: [
           <>
             Supported and improved web apps for the healthcare sector — because hospitals need bug-free software too. <br />
-            Worked on <b>SIMRS (Sistem Informasi Manajemen Rumah Sakit)</b> for RS Yukum Medical Centre. 
+            Worked on <b>SIMRS (Sistem Informasi Manajemen Rumah Sakit)</b> for RS Yukum Medical Centre.
             My days were filled with testing, debugging, and saving users from error screens.
           </>,
         ],
@@ -229,10 +229,10 @@ const about: About = {
             name: "Motion",
             icon: "motion",
           },
-          {
-            name: "Node.js",
-            icon: "nodejs",
-          },
+          // {
+          //   name: "Node.js",
+          //   icon: "nodejs",
+          // },
         ],
         // optional: leave the array empty if you don't want to display images
         // images: [
@@ -331,6 +331,43 @@ const about: About = {
         // ],
       },
       {
+        title: "React Native",
+        description: (
+          <>
+            Transforming JavaScript into native power without the headache of dual development.
+            <br />
+            🚀 "Deploy once, run everywhere."
+          </>
+        ),
+        tags: [
+          {
+            name: "React Native",
+            icon: "react",
+          },
+          {
+            name: "TypeScript",
+            icon: "typescript",
+          },
+          {
+            name: "Expo",
+            icon: "expo",
+          },
+          {
+            name: "Redux",
+            icon: "redux",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        // images: [
+        //   {
+        //     src: "/images/projects/project-01/cover-04.jpg",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        // ],
+      },
+      {
         title: "Database",
         description: (
           <>
@@ -347,6 +384,10 @@ const about: About = {
           {
             name: "MariaDB",
             icon: "mariadb",
+          },
+          {
+            name: "SQLite",
+            icon: "sqlite",
           },
           {
             name: "Redis",
