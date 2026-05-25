@@ -1,0 +1,35 @@
+---
+title: "Building Aria: A Healthcare AI Assistant using RAG and Google Gemini"
+summary: "Exploring the architecture of Aria, an intelligent virtual assistant that implements Retrieval-Augmented Generation (RAG) and Gemini Embeddings for the healthcare industry."
+publishedAt: "2026-05-25"
+tag: "Artificial Intelligence"
+image: "/images/gallery/vertical-1.jpg"
+---
+
+## What is Aria?
+
+Aria is a conversational AI assistant that we developed specifically for the **Casemix Pintar** ecosystem. Its primary goal is to help medical professionals, hospital coders, and healthcare facility management search for regulations, medical record documents, and clinical guidelines instantly and accurately.
+
+Given how crucial information accuracy is in the healthcare sector, simply using a standard Large Language Model (LLM) is not enough. LLMs are prone to *hallucinations*. Therefore, we built Aria using a **RAG (Retrieval-Augmented Generation)** architecture.
+
+## Why use RAG?
+
+RAG overcomes the main limitation of generative AI models by providing them with "context" from internal hospital documents or national healthcare regulations before the AI formulates an answer.
+
+For Aria, the workflow is as follows:
+1. **Knowledge Base Storage:** Regulatory documents, ICD coding guidelines, and medical records are converted into mathematical vectors using Google's `gemini-embedding-2`.
+2. **Semantic Search:** When a user asks a question, the system converts the query into a vector and searches for the most relevant document sections (*semantic search*).
+3. **Augmentation & Generation:** The relevant document snippets (context) are combined with the user's question and sent to the `gemini-3.1-flash` model.
+4. **Source Validation:** Aria is designed to always attach references and *chunk indices* indicating the source of its answers, allowing users to verify the information directly.
+
+## Implementation Challenges
+
+### Vector Database and Chunking
+One of the toughest challenges was handling document *chunking* correctly. Healthcare documents often have complex hierarchical structures or intricate table formats. If chunking is done randomly, the sentence context can be lost. We had to use smart parsing strategies to understand paragraph boundaries semantically.
+
+### Speed vs. Accuracy
+We chose `gemini-3.1-flash` because of its ability to process large amounts of context with extremely low latency. This is essential for a real-time chat application. Combined with WebSocket connections in our Fiber backend, users experience a smooth, streaming text flow, much like talking to a human assistant.
+
+## The Future of Aria
+
+Moving forward, Aria will not only answer passive questions but will act as an active "Copilot." Aria will be able to read the medical history of the patient currently being viewed by the doctor and automatically suggest the most appropriate ICD codes, allowing the coding process to be completed faster and with greater precision.

@@ -21,7 +21,8 @@ Casemix Pintar is an intelligent SaaS healthcare claims management system design
 ## Key Features
 
 ### **AI-Powered Document Analysis**
-- **Intelligent PDF Processing**: Automated extraction and analysis of medical documents using OpenAI GPT-4o
+- **Intelligent PDF Processing**: Automated extraction and analysis of medical documents using Google Gemini 3.1 Pro
+- **Aria AI Assistant**: Conversational AI assistant with RAG (Retrieval-Augmented Generation) for querying healthcare documents
 - **Real-time Progress Tracking**: WebSocket-based real-time updates during document processing
 - **Medical Data Extraction**: Automatic extraction of patient data, diagnoses, procedures, and treatment information
 - **ICD-10/ICD-9-CM Recommendations**: AI-powered coding suggestions for accurate medical classification
@@ -30,7 +31,7 @@ Casemix Pintar is an intelligent SaaS healthcare claims management system design
 ### **Advanced Claim Management**
 - **Bulk Claim Processing**: Handle large-scale claim uploads with batch processing capabilities
 - **Claim Validation Engine**: Automated validation against Indonesian healthcare rules and regulations
-- **VClaim Integration**: Seamless integration with Indonesian VClaim system for verification
+- **VClaim Verification**: Automated verification of SEP numbers through VClaim Excel data uploads
 - **Claim Monitoring**: Real-time tracking of claim status, processing times, and financial outcomes
 - **Utility Review**: Comprehensive analysis of claim utility and efficiency
 
@@ -58,7 +59,7 @@ Casemix Pintar is an intelligent SaaS healthcare claims management system design
 - **Framework**: Go with Fiber for high-performance HTTP server
 - **Database**: PostgreSQL with advanced indexing and partitioning
 - **ORM**: GORM with custom optimizations for large-scale data processing
-- **AI Integration**: OpenAI GPT-4o for document analysis and medical data extraction
+- **AI Integration**: Google Gemini for document analysis, conversational AI, and medical data extraction
 - **Real-time**: WebSocket support for live updates
 - **Authentication**: JWT-based authentication with role-based access control
 - **File Processing**: Advanced CSV/Excel parsing with support for large files
@@ -91,7 +92,8 @@ Handling massive healthcare datasets required implementing sophisticated databas
 ### **AI Integration Complexity**
 Integrating AI-powered document analysis presented several technical challenges:
 - **PDF Text Extraction**: Implemented robust PDF parsing using specialized libraries
-- **API Rate Limiting**: Managed OpenAI API rate limits and error handling
+- **API Rate Limiting**: Managed Google Gemini API rate limits and error handling
+- **Vector Embeddings**: Implemented RAG pipelines using Gemini Embeddings for accurate healthcare knowledge retrieval
 - **Real-time Progress**: Developed WebSocket-based progress tracking for long-running AI operations
 - **Error Recovery**: Implemented comprehensive error handling and retry mechanisms
 
@@ -131,12 +133,11 @@ Achieving optimal performance for large-scale operations involved:
 
 ## Outcome
 
-Casemix Pintar has successfully transformed healthcare claims management for Indonesian healthcare facilities by:
+Casemix Pintar provides a robust and modern foundation for healthcare claims management in Indonesia. By integrating AI and automated workflows, the system delivers tangible value to healthcare facilities through:
 
-- **Reducing Processing Time**: Automated claim processing reduced manual effort by 80%
-- **Improving Accuracy**: AI-powered validation increased claim accuracy by 95%
-- **Enhancing Compliance**: Automated compliance checking reduced regulatory issues by 90%
-- **Optimizing Revenue**: Intelligent analytics helped optimize claim submissions and reduce rejections
-- **Streamlining Operations**: Centralized management improved operational efficiency across multiple facilities
+- **Streamlined Claim Processing**: Automated PDF extraction and bulk processing capabilities significantly reduce the time required to digitize and manage medical claims.
+- **Data-Driven Coding Assistance**: The Gemini-powered AI assistant and automated ICD recommendations help coders find accurate medical classifications faster.
+- **Proactive Validation**: Automated rule engines and VClaim verification help identify potential data discrepancies before final submission, reducing the likelihood of rejected claims.
+- **Actionable Insights**: Built-in analytics for readmission, care fragmentation, and utility review empower hospital management to optimize both operational efficiency and financial outcomes.
 
-The system now serves as a comprehensive SaaS solution for healthcare claims management, providing healthcare facilities with the tools they need to optimize their financial performance while maintaining the highest standards of patient care and regulatory compliance.
+The platform establishes a scalable SaaS architecture capable of supporting multiple healthcare facilities, bridging the gap between complex regulatory requirements and modern technological solutions.
