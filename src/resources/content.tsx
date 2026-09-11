@@ -109,8 +109,7 @@ const about: About = {
         role: "Founder & Software Engineer",
         achievements: [
           <>
-            Turning claim headaches into winning victories! <br />
-            <b>Casemix Pintar</b> is your healthcare facility's smart sidekick that keeps BPJS claims happy. Less rejections, more approvals – we're making every claim count.
+            <b>Casemix Pintar</b> is your healthcare facility's smart sidekick that keeps BPJS claims happy. Less rejections, more approvals. we're making every claim count.
           </>,
           <>
             Building a clinic management system so smooth, even doctors approve! <br />
@@ -148,7 +147,7 @@ const about: About = {
           <>
             Built web apps that actually worked (most of the time) for local health projects. <br />
             Developed and maintained <b>SIMPUS (Sistem Informasi Puskesmas)</b> for Dinas Kesehatan Kabupaten Tanggamus. <br />
-            From database design to debugging and documentation, I did it all — including helping users when things went sideways.
+            From database design to debugging and documentation, I did it all including helping users when things went sideways.
           </>,
         ],
         images: [],
@@ -159,7 +158,7 @@ const about: About = {
         role: "Software Programmer",
         achievements: [
           <>
-            Supported and improved web apps for the healthcare sector — because hospitals need bug-free software too. <br />
+            Supported and improved web apps for the healthcare sector because hospitals need bug-free software too. <br />
             Worked on <b>SIMRS (Sistem Informasi Manajemen Rumah Sakit)</b> for RS Yukum Medical Centre.
             My days were filled with testing, debugging, and saving users from error screens.
           </>,
@@ -173,7 +172,7 @@ const about: About = {
         achievements: [
           <>
             Designed and developed clean, reusable UI components before it was cool. <br />
-            Worked on <b>Expedition Shipping Aggregator</b> and <b>Order Management & Fulfillment</b> systems — helping packages (and projects) get delivered on time.
+            Worked on <b>Expedition Shipping Aggregator</b> and <b>Order Management & Fulfillment</b> systems helping packages (and projects) get delivered on time.
             Created mockups, templates, and documentation to keep both code and humans on the same page.
           </>,
         ],
@@ -287,7 +286,7 @@ const about: About = {
         title: "Laravel",
         description: (
           <>
-            Crafting digital products that are elegant inside and out — clean, maintainable, and built to last.
+            Crafting digital products that are elegant inside and out clean, maintainable, and built to last.
             <br />
             ❤️ "Because clean code is an art."
           </>
@@ -371,9 +370,9 @@ const about: About = {
         title: "Database",
         description: (
           <>
-            Designing architectures that keep data flowing — efficient, reliable, and ready for anything.
+            Designing architectures that keep data flowing efficient, reliable, and ready for anything.
             <br />
-            🧩 "Data-driven, performance-focused."
+            🧩 "Data driven, performance focused."
           </>
         ),
         tags: [
@@ -408,7 +407,7 @@ const about: About = {
         title: "Tools & DevOps",
         description: (
           <>
-            Automating the invisible — smooth deployments, secure pipelines, and zero-downtime confidence.
+            Automating the invisible smooth deployments, secure pipelines, and zero downtime confidence.
             <br />
             ⚙️ "Build. Ship. Repeat."
           </>

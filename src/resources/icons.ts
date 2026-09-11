@@ -25,7 +25,6 @@ import {
 
 import {
   SiAlpinedotjs,
-  SiAmazon,
   SiAngular,
   SiCloudflare,
   SiDocker,
@@ -114,7 +113,6 @@ export const iconLibrary: Record<string, IconType> = {
   python: SiPython,
   docker: SiDocker,
   kubernetes: SiKubernetes,
-  aws: SiAmazon,
   vercel: SiVercel,
   railway: SiRailway,
   cloudflare: SiCloudflare,
